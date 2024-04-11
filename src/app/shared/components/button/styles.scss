@@ -1,0 +1,146 @@
+@use '../../../styles/variables.scss' as *;
+
+.btn {
+	border-radius: var(--border-radius);
+	font-family: inherit;
+	// font-family: var(--font-family);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: fz(16px);
+	transition: all 0.3s;
+	font-weight: 600;
+	background-color: #fff;
+	gap: 12px;
+	height: fz(40px);
+	padding-inline: fz(16px);
+	&:hover {
+		opacity: 0.8;
+	}
+	&.normal {
+		font-weight: 400;
+	}
+	&:hover {
+		transform: scale(1.05);
+		background-color: #f9f9f9;
+	}
+	&.block {
+		width: 100%;
+	}
+	&.flex {
+		display: flex;
+	}
+	&.lg {
+		height: fz(56px, 24px);
+		font-size: fz(24px);
+		padding-inline: fz(20px);
+		@include mobile {
+			padding-inline: fz(16px);
+			font-size: fz(16px);
+			height: fz(48px, 16px);
+		}
+	}
+	&.md {
+		height: fz(48px);
+		padding-inline: fz(20px);
+		@include mobile {
+			padding-inline: fz(16px);
+		}
+	}
+	&.sm {
+		height: fz(40px);
+	}
+	&.xs {
+		height: fz(30px);
+	}
+	&.primary {
+		background-color: color(primary);
+		color: white;
+
+		&.outlined {
+			background-color: transparent;
+			color: color(text);
+			border: var(--border-width-button) solid color(primary);
+		}
+
+		&.disabled {
+			background-color: color(primary-light);
+		}
+	}
+
+	&.rounded {
+		border-radius: 43px;
+	}
+	&.round {
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		&.md {
+			width: fz(48px);
+			height: fz(48px);
+		}
+		&.sm {
+			width: fz(40px);
+			height: fz(40px);
+		}
+		&.lg {
+			width: fz(56px);
+			height: fz(56px);
+		}
+		&.xs {
+			height: fz(30px);
+			width: fz(30px);
+		}
+	}
+
+	&.success {
+		background-color: color(success);
+		color: white;
+		&.outlined {
+			background: transparent;
+			color: color(success);
+			border: var(--border-width-button) solid color(success);
+		}
+		&.disabled {
+			background-color: color(success-light);
+		}
+	}
+
+	&.error {
+		background-color: color(error);
+		color: white;
+		&.outlined {
+			background: transparent;
+			color: color(error);
+			border: var(--border-width-button) solid color(error);
+		}
+		&.disabled {
+			background-color: color(error-light);
+		}
+	}
+
+	&.gray {
+		background-color: color(gray);
+		color: color(text);
+		&:hover {
+			background-color: color(gray-lighten);
+		}
+		&.outlined {
+			background: transparent;
+			color: color(text);
+			border: var(--border-width-button) solid color(gray);
+		}
+		&.disabled {
+			background-color: color(gray-light);
+		}
+	}
+
+	&.light {
+		background-color: white;
+		&.disabled {
+			background-color: color(gray-lighten);
+		}
+	}
+}

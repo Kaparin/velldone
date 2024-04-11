@@ -1,0 +1,96 @@
+@use 'sass:math' as math;
+$mobile-size: 1000px;
+$container: 1320px + 32px;
+
+$base-font-size: 16px;
+
+@function get-em($px, $context: 16px) {
+	@return math.div($px, $context) * 1em;
+}
+
+@function color($color) {
+	@return var(--color-#{$color});
+}
+
+@function fz($size, $msize: $base-font-size) {
+	@return get-em($size, $msize);
+}
+
+@mixin fz($size, $msize: $size) {
+	font-size: fz($size);
+	@media (max-width: $mobile-size) {
+		font-size: fz($msize);
+	}
+}
+
+$h1-font-size: 42px;
+$h2-font-size: 24px;
+$h3-font-size: 16px;
+$h4-font-size: 14px;
+$h5-font-size: 12px;
+
+$h1-mobile-size: 24px;
+$h2-mobile-size: 16px;
+$h3-mobile-size: 16px;
+$h4-mobile-size: 14px;
+$h5-mobile-size: 12px;
+
+@mixin mobile {
+	@media (max-width: $mobile-size) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media (min-width: $mobile-size) {
+		@content;
+	}
+}
+
+:root {
+	--color-text: #38393d;
+	--color-gray: #d5d6d9;
+	--color-gray-dark: #75778a;
+	--color-gray-light: #f2f2f2;
+	--color-gray-lighten: #faf8ff;
+
+	--color-primary: #b63457;
+	--color-primary-light: #da99ab;
+	--color-primary-lighten: #f9e3e4;
+	--color-orange: #ffbb5c;
+	--color-orange-light: #ffdeb0;
+	--color-orange-lighten: #fff2df;
+	--color-orange-rating: #fcc72c;
+
+	--color-error: #ff6666;
+	--color-error-light: #ffcccc;
+	--color-success: #b2dd66;
+	--color-success-light: #d9f6c7;
+
+	--color-purple: #c292f4;
+	--color-purple-light: #eeddff;
+
+	// --font-family: 'Rubik', sans-serif;
+	--base-font-size: #{$base-font-size};
+
+	--h1-font-size: #{fz($h1-font-size)};
+	--h2-font-size: #{fz($h2-font-size)};
+	--h3-font-size: #{fz($h3-font-size)};
+	--h4-font-size: #{fz($h4-font-size)};
+	--h5-font-size: #{fz($h5-font-size)};
+
+	--border-radius: 10px;
+	--border-width-button: 2px;
+	--border-width: 1px;
+}
+
+.only-mobile {
+	@media (min-width: $mobile-size) {
+		display: none !important;
+	}
+}
+
+.only-desktop {
+	@media (max-width: $mobile-size) {
+		display: none !important;
+	}
+}

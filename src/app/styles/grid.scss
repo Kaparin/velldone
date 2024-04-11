@@ -1,0 +1,83 @@
+@use './variables.scss' as *;
+
+.fg {
+	flex-grow: 1;
+}
+
+.flex {
+	display: flex;
+	width: 100%;
+	&.center {
+		justify-content: center;
+	}
+	&.column {
+		flex-direction: column;
+	}
+	&.wrap {
+		flex-wrap: wrap;
+	}
+	&.nowrap {
+		flex-wrap: nowrap;
+	}
+	&.start {
+		justify-content: flex-start;
+	}
+	&.end {
+		justify-content: flex-end;
+	}
+	&.between {
+		justify-content: space-between;
+	}
+	&.ai-start {
+		align-items: flex-start;
+	}
+	&.ai-end {
+		align-items: flex-end;
+	}
+	&.ai-center {
+		align-items: center;
+	}
+}
+.w100 {
+	width: 100%;
+}
+
+.gap-12 {
+	gap: 12px;
+}
+
+.gap-20 {
+	gap: 20px;
+}
+
+.gap-24 {
+	gap: 24px;
+}
+
+.gap-30 {
+	gap: 30px;
+}
+
+.gap-34 {
+	gap: 30px;
+}
+
+.gap-36 {
+	gap: 36px;
+}
+
+.grid-number-cards {
+	gap: fz(74px);
+	flex-wrap: nowrap;
+	@include mobile {
+		gap: fz(16px);
+		flex-direction: column;
+	}
+}
+
+.container {
+	max-width: $container;
+	margin: 0 auto;
+	padding: 0 16px;
+	width: 100%;
+}

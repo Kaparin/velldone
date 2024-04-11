@@ -1,0 +1,29 @@
+@use "../../styles/variables.scss" as *;
+
+.app-section-2 {
+  padding-block: fz(160px);
+  .flex {
+    gap: 66px;
+  }
+  img {
+    @include desktop {
+      min-width: 536px;
+    }
+  }
+  p {
+    font-size: fz(24px);
+  }
+  @include mobile {
+    padding-block: fz(45px);
+    .flex {
+      flex-direction: column-reverse;
+      gap: 40px;
+    }
+    img {
+      width: 100%;
+    }
+    p {
+        font-size: fz(16px);
+    }
+  }
+}

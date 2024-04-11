@@ -1,0 +1,62 @@
+@use '../../styles/variables.scss' as *;
+
+.app-banner-lg {
+	background-color: color(primary);
+	padding-block-start: fz(46px);
+	padding-block-end: fz(70px);
+	@include mobile {
+		padding-block-start: fz(32px);
+		padding-block-end: fz(40px);
+	}
+	.btn.lg {
+		padding-inline: fz(14px);
+		@include mobile {
+			padding-inline: fz(26px);
+		}
+	}
+	.cell-2 {
+		max-width: 40%;
+		min-width: 40%;
+		padding: 16px;
+		@include mobile {
+			max-width: 100%;
+			min-width: 100%;
+		}
+	}
+	h1,
+	h2,
+	p {
+		color: white;
+	}
+	&-content {
+		display: flex;
+		flex-direction: column;
+		gap: 48px;
+		@include mobile {
+			gap: 24px;
+		}
+		p {
+			max-width: 540px;
+		}
+	}
+	.flex {
+		@include mobile {
+			flex-direction: column;
+		}
+	}
+	h1 {
+		font-size: fz(42px);
+		font-weight: 600;
+		line-height: 1.2;
+		@include mobile {
+			font-size: fz(24px);
+		}
+	}
+	p {
+		font-size: fz(24px);
+		line-height: 1.4;
+		@include mobile {
+			font-size: fz(16px);
+		}
+	}
+}

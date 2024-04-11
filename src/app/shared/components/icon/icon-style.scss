@@ -1,0 +1,31 @@
+@use '../../../styles/variables.scss' as *;
+
+.size {
+	&-8 {
+		font-size: fz(8px);
+	}
+	&-10 {
+		font-size: fz(10px);
+	}
+	&-12 {
+		font-size: fz(12px);
+	}
+	&-14 {
+		font-size: fz(14px);
+	}
+	&-18 {
+		font-size: fz(18px);
+	}
+	&-20 {
+		font-size: fz(20px);
+	}
+	&-22 {
+		font-size: fz(22px);
+	}
+	&-24 {
+		font-size: fz(24px);
+	}
+	&-28 {
+		font-size: fz(28px);
+	}
+}

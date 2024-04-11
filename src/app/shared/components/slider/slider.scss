@@ -1,0 +1,30 @@
+@use "../../../styles/variables.scss" as *;
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+.splide__arrows {
+  display: flex;
+  gap: 10px;
+  position: static;
+}
+.splider-container {
+	width: 100%;
+}
+.splide__arrow {
+  &.slider-custom {
+    &-prev.splide__arrow--prev,
+    &-next.splide__arrow--next {
+      position: static;
+      transform: none;
+      background: white;
+      border: var(--border-width) solid black;
+      border-radius: var(--border-radius);
+      width: 40px;
+      height: 40px;
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+}

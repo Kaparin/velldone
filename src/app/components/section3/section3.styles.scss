@@ -1,0 +1,71 @@
+@use "../../styles/variables.scss" as *;
+
+.app-section-3 {
+  text-align: center;
+
+  background-color: #faf8ff;
+  padding: 80px 0 108px;
+  img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    max-height: 60px;
+  }
+  h2 {
+    font-size: fz(42px);
+    line-height: 1.2;
+  }
+  .cell {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  .flex {
+    display: flex;
+    .cell {
+      width: 25%;
+    }
+  }
+  h3 {
+    font-size: fz(16px);
+    @include desktop {
+      max-width: 154px;
+    }
+  }
+  &-ibox {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+  }
+  @include mobile {
+    padding: 40px 0;
+    h2 {
+      font-size: fz(24px);
+      text-align: start;
+      br {
+        display: none;
+      }
+    }
+    h3 {
+      font-weight: normal;
+    }
+    &-ibox {
+      width: 70px;
+      height: 70px;
+    }
+    .flex {
+      flex-wrap: wrap;
+      .cell {
+        width: 50%;
+        padding: 20px;
+      }
+    }
+  }
+}

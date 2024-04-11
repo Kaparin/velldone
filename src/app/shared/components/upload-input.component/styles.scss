@@ -1,0 +1,42 @@
+.upload-input {
+	&-container {
+		position: relative;
+		width: 96px;
+		height: 96px;
+	}
+	&-image {
+		position: relative;
+		border-radius: 50%;
+		width: 100%;
+		height: 100%;
+		&:hover {
+			border-radius: 10%;
+			filter: grayscale(50%);
+		}
+	}
+	&-chose {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		filter: drop-shadow(0 0 4px rgb(0, 0, 0, 0.25));
+	}
+	&-input {
+		display: none;
+	}
+	&-label {
+		position: absolute;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		z-index: 1;
+		transition: 0.7s;
+		border-radius: 50%;
+		&:hover {
+			opacity: 1;
+			background-color: rgba(255, 255, 255, 0.155);
+		}
+	}
+}
